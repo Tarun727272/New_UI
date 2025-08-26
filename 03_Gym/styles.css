@@ -1,0 +1,63 @@
+/* Global & Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body, input, button, textarea { font-family: 'Poppins', sans-serif; }
+a { text-decoration: none; color: inherit; }
+.navbar { position: fixed; top: 0; width: 100%; background: rgba(0, 0, 0, 0.7); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; transition: background 0.3s; }
+.navbar.scrolled { background: rgba(0, 0, 0, 0.9); }
+.nav-links { list-style: none; display: flex; gap: 1rem; align-items: center; }
+.nav-links li button { background: linear-gradient(135deg, #ff416c, #ff4b2b); border: none; padding: 0.6rem 1.2rem; border-radius: 25px; color: #fff; cursor: pointer; transition: transform 0.2s; }
+.nav-links li button:hover { transform: scale(1.05); }
+.hamburger { display: none; flex-direction: column; gap: 4px; cursor: pointer; }
+.hamburger div { width: 25px; height: 3px; background: #fff; }
+
+/* Hero Section */
+.hero { display: flex; justify-content: center; align-items: center; text-align: center; height: 100vh; background: linear-gradient(to bottom right, #667eea, #764ba2), url('gym-bg.jpg') center/cover no-repeat; color: #fff; padding: 0 1rem; }
+.hero-content h1 { font-size: 3.5rem; animation: fadeInDown 1s ease-in-out; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+.hero-content p { font-size: 1.25rem; margin: 1rem 0; animation: fadeIn 1.2s ease-in-out; }
+.cta { background: linear-gradient(135deg, #ff416c, #ff4b2b); border: none; padding: 0.8rem 2rem; border-radius: 30px; color: #fff; font-size: 1rem; cursor: pointer; box-shadow: 0 8px 20px rgba(0,0,0,0.2); transition: transform 0.3s; animation: popIn 0.8s ease-in-out; }
+.cta:hover { transform: scale(1.1); }
+
+/* Animations */
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes popIn { from { opacity: 0; transform: scale(0.7); } to { opacity: 1; transform: scale(1); } }
+
+/* Section Styles (Services, Trainers, Pricing, Testimonials, Contact) */
+section { padding: 4rem 5%; }
+h2 { text-align: center; margin-bottom: 2rem; font-size: 2rem; position: relative; }
+.service-cards, .trainer-cards, .pricing-tables, .testimonial-slider { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; }
+.card, .trainer, .plan, .testimonial { background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s, box-shadow 0.3s; }
+.card:hover, .trainer:hover, .plan:hover, .testimonial:hover { transform: translateY(-10px); box-shadow: 0 15px 25px rgba(0,0,0,0.2); }
+.icon { font-size: 2.5rem; margin-bottom: 1rem; color: #ff416c; }
+.trainer img { width: 100%; border-radius: 10px; margin-bottom: 1rem; }
+.plan button { margin-top: 1rem; padding: 0.5rem 1rem; border: none; border-radius: 25px; background: linear-gradient(135deg, #ff416c, #ff4b2b); color: #fff; cursor: pointer; transition: transform 0.2s; }
+.plan button:hover { transform: scale(1.05); }
+
+/* Contact Form */
+.contact form { max-width: 600px; margin: auto; display: flex; flex-direction: column; gap: 1rem; }
+.contact input, .contact textarea { padding: 0.8rem; border: 2px solid #ccc; border-radius: 5px; resize: vertical; }
+.contact button { padding: 0.8rem; border: none; border-radius: 25px; background: linear-gradient(135deg, #ff416c, #ff4b2b); color: #fff; font-size: 1rem; cursor: pointer; transition: transform 0.2s; }
+.contact button:hover { transform: scale(1.05); }
+
+/* Footer */
+.footer { background: #111; color: #fff; text-align: center; padding: 2rem 1rem; }
+.social-icons { display: flex; gap: 1rem; justify-content: center; margin-bottom: 1rem; }
+.social-icons a { font-size: 1.5rem; color: #fff; transition: color 0.3s; }
+.social-icons a:hover { color: #ff416c; }
+
+/* Modal & Back-to-Top */
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; }
+.modal.hidden { display: none; }
+.modal .form { background: #fff; padding: 2rem; border-radius: 10px; width: 90%; max-width: 420px; position: relative; animation: scaleIn 0.4s ease; }
+.modal .close-btn { position: absolute; top: 15px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+.back-to-top { position: fixed; bottom: 30px; right: 30px; background: linear-gradient(135deg, #ff416c, #ff4b2b); color: #fff; border: none; border-radius: 50%; width: 45px; height: 45px; font-size: 1.2rem; display: none; align-items: center; justify-content: center; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+.back-to-top.visible { display: flex; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-cards, .trainer-cards, .pricing-tables, .testimonial-slider { flex-direction: column; }
+  .nav-links { display: none; position: absolute; top: 70px; right: 0; background: rgba(0,0,0,0.9); flex-direction: column; width: 200px; padding: 1rem; }
+  .nav-links.active { display: flex; }
+  .hamburger { display: flex; }
+}

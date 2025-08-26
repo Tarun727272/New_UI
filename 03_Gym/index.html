@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitFlex Gym</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="scripts.js"></script>
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="logo">FitFlex</div>
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="loginBtn">Login</button></li>
+        <li><button id="registerBtn">Register</button></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <div></div><div></div><div></div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Transform Your Body</h1>
+      <p>Join FitFlex and reach your fitness goals.</p>
+      <button class="cta">Get Started</button>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Our Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <i class="fa fa-dumbbell icon"></i><h3>Strength Training</h3><p>Build muscle and stamina.</p>
+      </div>
+      <div class="card">
+        <i class="fa fa-running icon"></i><h3>Cardio Workouts</h3><p>Improve your endurance.</p>
+      </div>
+      <div class="card">
+        <i class="fa fa-heartbeat icon"></i><h3>Wellness Plans</h3><p>Mind & body balance.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="trainers" class="trainers">
+    <h2>Meet Our Trainers</h2>
+    <div class="trainer-cards">
+      <div class="trainer"><img src="trainer1.jpg" alt="Trainer"><h4>Emma Lee</h4><p>Fitness Coach</p></div>
+      <div class="trainer"><img src="trainer2.jpg" alt="Trainer"><h4>John Doe</h4><p>Cardio Specialist</p></div>
+      <div class="trainer"><img src="trainer3.jpg" alt="Trainer"><h4>Sara Kim</h4><p>Yoga Instructor</p></div>
+    </div>
+  </section>
+
+  <section id="pricing" class="pricing">
+    <h2>Membership Plans</h2>
+    <div class="pricing-tables">
+      <div class="plan">
+        <h3>Basic</h3><p>$30/mo</p><ul><li>Gym Access</li><li>1 Class/week</li><li>Free WiFi</li></ul><button>Choose</button>
+      </div>
+      <div class="plan">
+        <h3>Standard</h3><p>$50/mo</p><ul><li>All Basic</li><li>5 Classes/week</li><li>Locker Access</li></ul><button>Choose</button>
+      </div>
+      <div class="plan">
+        <h3>Premium</h3><p>$80/mo</p><ul><li>All Standard</li><li>Unlimited Classes</li><li>Personal Trainer</li></ul><button>Choose</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials">
+    <h2>What Our Members Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial"><p>"FitFlex changed my life!"</p><h4>- Alex</h4></div>
+      <div class="testimonial"><p>"Best trainers ever."</p><h4>- Mia</h4></div>
+      <div class="testimonial"><p>"I love the energy."</p><h4>- Liam</h4></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Get in Touch</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+      <a href="#"><i class="fa fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2025 FitFlex Gym. All rights reserved.</p>
+  </footer>
+
+  <div class="modal hidden" id="authModal"></div>
+  <button id="backToTop" class="back-to-top"><i class="fa fa-chevron-up"></i></button>
+</body>
+</html>
