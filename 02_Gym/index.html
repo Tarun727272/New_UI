@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FitPro Gym</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">FitPro</div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#trainers">Trainers</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><button id="loginBtn">Login</button></li>
+          <li><button id="registerBtn">Register</button></li>
+        </ul>
+        <div class="hamburger"><i class="fa fa-bars"></i></div>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Unlock Your Best Self</h1>
+        <p>Join FitPro and transform your fitness journey today.</p>
+        <button class="cta">Get Started</button>
+      </div>
+    </section>
+
+    <section id="services" class="services">
+      <h2>What We Offer</h2>
+      <div class="service-cards">
+        <div class="card">
+          <i class="fa fa-dumbbell icon"></i>
+          <h3>Strength Training</h3>
+          <p>Build muscle and power.</p>
+        </div>
+        <div class="card">
+          <i class="fa fa-running icon"></i>
+          <h3>Cardio Sessions</h3>
+          <p>Burn calories fast.</p>
+        </div>
+        <div class="card">
+          <i class="fa fa-heartbeat icon"></i>
+          <h3>Wellness Programs</h3>
+          <p>Stay fit & healthy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="trainers" class="trainers">
+      <h2>Meet Our Trainers</h2>
+      <div class="trainer-cards">
+        <!-- repeat trainer card markup -->
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+      <h2>Membership Plans</h2>
+      <div class="pricing-tables">
+        <!-- repeat pricing table markup -->
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <h2>Success Stories</h2>
+      <div class="testimonial-slider">
+        <!-- slides with fade/carousel effect -->
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Get In Touch</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="social-icons">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+      <p>&copy; 2025 FitPro Gym. All rights reserved.</p>
+    </footer>
+
+    <div class="modal hidden" id="authModal"></div>
+
+    <button id="backToTop" class="back-to-top">
+      <i class="fa fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
