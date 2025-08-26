@@ -1,0 +1,47 @@
+/* Reset & Base */
+*, *::before, *::after { margin:0; padding:0; box‑sizing:border-box; }
+body { font‑family:sans‑serif; background:linear‑gradient(135deg,#6a11cb,#2575fc); color:#fff; }
+a { text-decoration:none; color:inherit; }
+
+/* NavBar */
+.navbar { display:flex; justify‑content:space‑between; padding:1rem 2rem; background:rgba(0,0,0,0.3); }
+.nav-links { list‑style:none; display:flex; gap:1rem; }
+.nav-links li a:hover { text-shadow:0 0 8px rgba(255,255,255,0.8); }
+
+/* Hero Section */
+.hero { text-align:center; padding:4rem 1rem; }
+.hero h1 { font-size:3rem; text-shadow:2px 2px 8px rgba(0,0,0,0.4); animation:fadeInDown 1s ease-in-out; }
+.hero p { font-size:1.25rem; margin:1rem 0 2rem; animation:fadeIn 1.5s ease; }
+.social-icons a { font-size:2rem; margin:0 0.5rem; opacity:0.8; animation:popIn 0.5s ease forwards; }
+@keyframes fadeInDown { from { opacity:0; transform:translateY(-50px);} to { opacity:1; transform:none;} }
+@keyframes fadeIn { from {opacity:0;} to {opacity:1;} }
+@keyframes popIn { from {opacity:0; transform:scale(0);} to {opacity:1; transform:scale(1);} }
+
+/* Modal (Login/Register) */
+.modal { position:fixed; inset:0; background:rgba(0,0,0,0.6); display:flex; justify-content:center; align-items:center; }
+.modal.hidden { display:none; }
+.form-container { background:#fff; color:#333; border-radius:10px; width:90%; max-width:400px; padding:2rem; box-shadow:0 10px 30px rgba(0,0,0,0.2); position:relative; animation:scaleIn 0.4s ease; }
+@keyframes scaleIn { from {opacity:0; transform:scale(0.8);} to {opacity:1; transform:scale(1);} }
+
+/* Form Fields with Floating Labels */
+.input-group { position:relative; margin:1rem 0; }
+.input-group input { width:100%; padding:12px; border:2px solid #ccc; border-radius:5px; }
+.input-group label { position:absolute; top:50%; left:12px; transform:translateY(-50%); transition:0.3s; pointer-events:none; opacity:0.7; }
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top:-8px; left:8px; font-size:0.8rem; background:#fff; padding:0 4px; opacity:1; }
+
+/* Buttons */
+.btn { width:100%; padding:12px; border:none; border-radius:25px; font-size:1rem; cursor:pointer; background:linear-gradient(135deg,#ff416c,#ff4b2b); color:#fff; transition:transform 0.2s; }
+.btn:hover { transform:scale(1.05); }
+
+/* Toggle links */
+.toggle-row { text-align:center; margin:1rem 0; font-size:0.9rem; }
+.toggle-row a { color:#007bff; cursor:pointer; }
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .navbar { flex-direction:column; align-items:flex-start; }
+  .hero h1 { font-size:2rem; }
+  .hero p { font-size:1rem; }
+}
