@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editable Profile Card</title>
+    <style>
+      body {
+        font-family: Arial;
+        background: linear-gradient(to top left, #00c6ff, #0072ff);
+        height: 100vh;
+        display: grid;
+        place-items: center;
+        color: white;
+      }
+      .card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 10px;
+        text-align: center;
+        width: 300px;
+        backdrop-filter: blur(10px);
+      }
+      input {
+        width: 100%;
+        margin: 10px 0;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        background: white;
+        color: #0072ff;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Profile Card</h2>
+      <input id="name" type="text" placeholder="Your Name" />
+      <input id="email" type="email" placeholder="Your Email" />
+      <button onclick="saveProfile()">Save</button>
+      <p id="message"></p>
+    </div>
+
+    <script>
+      function saveProfile() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        localStorage.setItem("userProfile", JSON.stringify({ name, email }));
+        document.getElementById("message").textContent = "Profile saved!";
+      }
+
+      // Load if exists
+      const saved = JSON.parse(localStorage.getItem("userProfile"));
+      if (saved) {
+        document.getElementById("name").value = saved.name;
+        document.getElementById("email").value = saved.email;
+      }
+    </script>
+  </body>
+</html>
