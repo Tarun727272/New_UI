@@ -1,0 +1,165 @@
+/* Reset & Globals */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+/* Gradient Background Animation */
+body.landing-page {
+  background: linear-gradient(270deg, #667eea, #764ba2);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: white;
+}
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+/* Hero Section */
+.hero {
+  display: grid;
+  place-items: center;
+  height: calc(100vh - 80px);
+  text-align: center;
+}
+.hero-content h1 {
+  font-size: 3rem;
+}
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+.btn {
+  background-color: #fff;
+  color: #333;
+  padding: 12px 25px;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+/* Auth Pages */
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle at top left, #43cea2, #185a9d);
+  animation: gradientBG 20s ease infinite;
+}
+.auth-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.auth-panel h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+.auth-panel form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.auth-panel input {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.auth-panel button {
+  padding: 12px;
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.auth-panel button:hover {
+  background: #ddd;
+}
+.auth-link {
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+}
+#passStrength {
+  color: white;
+  font-size: 0.8rem;
+}
+/* Dashboard */
+.dashboard-page {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+
+.sidebar {
+  background: #222;
+  color: white;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sidebar nav a {
+  color: white;
+  margin-bottom: 10px;
+  display: block;
+}
+.sidebar nav a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  padding: 40px;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+  .dashboard-page {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
