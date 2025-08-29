@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      height: 100vh;
+    }
+    aside {
+      background: #222;
+      color: white;
+      padding: 20px;
+    }
+    aside h2 {
+      margin-bottom: 20px;
+    }
+    aside nav a {
+      display: block;
+      color: white;
+      margin: 10px 0;
+      text-decoration: none;
+    }
+    main {
+      padding: 30px;
+    }
+    @media (max-width: 768px) {
+      body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+      }
+      aside {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h2>Dashboard</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Analytics</a>
+      <a href="#">Settings</a>
+    </nav>
+  </aside>
+  <main>
+    <h1>Welcome Back!</h1>
+    <p>This is a responsive dashboard layout using CSS grid and media queries.</p>
+  </main>
+</body>
+</html>
